@@ -1,0 +1,34 @@
+.bar{background-color: #c8000a; height: 2rem;}
+.login-box img{
+	width: 100%;
+	max-height: 50%;
+	margin-bottom: 15px;
+	 
+	position: relative; 
+	-webkit-box-shadow: 0px 5px 5px -1px rgba(53,52,48,1);
+	-moz-box-shadow: 0px 5px 5px -1px rgba(53,52,48,1);
+	box-shadow: 0px 5px 5px -1px rgba(53,52,48,1);
+}
+.login-banner  {max-width: 100%}
+.row h4 {margin-left: 10px}
+.row h4:after{content:" "; min-width: 135px; max-width:135px; height:1px; background:#c8000a;; display:block; margin: 5px 0px 10px -10px; border-radius:3px; }
+
+.registerlink:hover {color: #c8000a;}
+@media (min-width: 544px) {  
+  .bar{height: 3rem;}  
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+  .bar{height: 4rem;}  
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .bar{height: 5rem;}  
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+  .bar{height: 6rem;}    
+}

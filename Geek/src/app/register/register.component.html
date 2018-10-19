@@ -1,0 +1,45 @@
+<div class="container register-form" id="register">
+		<div class="row">
+			<div class="col-lg-5 col-md-5 col-sm-7">
+				<h4> Register </h4>
+				<form>
+					<div class="form-group">
+				      <label for="exampleInputEmail1" class="text-uppercase" >Username</label>
+				      <input type="text" class="form-control" name="username" placeholder="" [(ngModel)]="user.username">
+				    </div>
+				    <div *ngIf="usernameFailed" class="alert alert-danger">{{userMessage}}</div>
+				    <div class="form-group">
+				      <label for="exampleInputEmail1" class="text-uppercase" >Email Address</label>
+				      <input type="text" class="form-control" name="email" placeholder="" [(ngModel)]="user.email">
+				    </div>
+				    <div class="form-group">
+				     <label for="exampleInputPassword1" class="text-uppercase" >Password</label>
+				     <input type="password" class="form-control" name="password" placeholder="" [(ngModel)]="user.password">
+				    </div>
+				    <div class="form-group">
+				     <label for="exampleInputPassword1" class="text-uppercase" >Confirm Password</label>
+				     <input type="password" class="form-control" name="password2" placeholder="" [(ngModel)]="user.confirmpassword">
+				    </div>
+				    <div *ngIf="passwordConfirmationFailed" class="alert alert-danger">{{passwordMessage}}</div>
+				    <div class="form-group">
+				     <label for="exampleInputPassword1" class="text-uppercase" >Birthday</label>
+				     <input type="date" class="form-control" name="birthday" placeholder="" [(ngModel)]="user.birthday">
+				    </div>
+				    <div [hidden]="!error" class="alert alert-danger">{{errorMessage}}</div>
+				    <label for="gender" class="text-uppercase"> Gender:</label>	
+				      <div class="form-group row justify-content-around">
+				      	<div class="col-4">
+				      	<label class="radio-inline"><input type="radio" name="gender" [(ngModel)]="user.gender" value="male"> Male </label>
+				      </div>
+				      <div class="col-4">
+				      	<label class="radio-inline"><input type="radio" [(ngModel)]="user.gender" name="gender"value="female"> Female </label>
+				      </div>
+				      </div>
+
+				    <div class="form-group button-section">
+				    	<button type="submit" class="submit" (click)="submitPress()"> Submit </button>
+				    </div>
+				</form>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,92 @@
+<div *ngIf="info" class="profile container">
+ <div class="container profilebox row">
+
+
+ 	<div class="left col-md-5 col-sm-12">
+ 		<h5 class="username">{{info.username}}</h5>
+ 		 <div *ngIf="info.picture" class="picture">
+ 		 	<div class="container imageContainer">
+				<img class="profileImage" [src]="'data:image/png;base64,'+info.picture | safeHtml">
+			</div>
+ 		 </div>
+
+ 		 <div *ngIf="viewself">
+ 		 	<div class="form-group pictureChange">
+				<label for="file" >Change Picture</label>
+				<input class="formButton" type="file" (change)="onFileSelected($event)">
+			</div>
+ 		 </div>
+
+ 		 
+ 	</div>
+
+
+ 	<div class = "right col-md-7 col-sm-12">
+ 		<div>
+ 			Age: {{info.age}}
+ 		</div>
+ 		<div>
+ 			Gender: {{info.gender}}
+ 		</div>
+
+ 		<div *ngIf="viewself">
+			<div class="form-group">
+				<div class="form-group">
+					<label for="description" >About Me: </label>
+			  		<textarea  class="form-control" name="desciption" placeholder="" [(ngModel)]="info.description"></textarea>
+		    	</div>
+				<label for="capacity" class="text-uppercase" > Things I Like: </label>
+				<div class="interestsList">
+					
+						<div *ngFor="let interest of info.likes; let i = index" class="row interestElement"> 
+							<div class="col-9 interestLabel">{{interest}} </div>
+							<div class="col-2"> 
+								<button class="formButton innerButton" (click)="deleteItem(i)"> x </button>
+							</div> 
+						</div> 
+					
+				</div>
+
+				<input type="text" class="form-control" name="likes" placeholder="" [(ngModel)]="newInterest">
+				<button (click)="addInterest()" class="formButton interestButton"> Add New Interest </button>
+			</div>
+			<div class="submitButton">
+				<button (click)="submitChanges()" class="formButton"> Submit Changes </button>
+			</div>
+		</div>
+ 		<div *ngIf="!viewself">
+			<div class="form-group">
+				<div class="form-group">
+					<label for="description" >About Me: </label>
+					<div class="aboutMe">
+						<p> {{info.description}}</p>
+					</div>
+			  		
+		    	</div>
+				<label for="capacity" class="text-uppercase" > Things I Like: </label>
+				<div class="interestsList">
+					
+						<div *ngFor="let interest of info.likes; let i = index" class="row interestElement"> 
+							<div class="col-9 interestLabel">{{interest}} </div>
+						</div> 
+					
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+ 		 
+ 	</div>
+
+ 	
+ </div>
+</div>
+
+
+ 
+
+
+<div>

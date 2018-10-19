@@ -1,0 +1,72 @@
+.eventDiv{ margin: 10px; justify-content: center;}
+.button-section{ margin-top: 10px }
+.dashboard{ background-color: #e9ebee; border: 1px solid #dadde8; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.options{text-align: center; margin-top: 5px;}
+.dropdown-item:hover { color: #c8000a; }
+.dropdown { position: relative; display: inline-block;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover {color: #c8000a;}
+
+
+.eventItem{height: 450px; background-color: white;  color:black;  margin: 5px;text-align: center; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid #dadde8; padding: 5px;}
+
+.eventImageContainer{ width:100%; padding:1rem; height: 400px; position: relative;}
+.eventImage{width: 100%; max-height: 100%; position:absolute; padding: 1rem; top:0; bottom:0; margin:auto; margin-left: -50%;}
+
+.eventItem h5:after{ width: 30%; height: 1px; background: #c8000a; content:' '; display: block; margin-left:auto;margin-right:auto; margin-top: 5px;}
+.captiondescription{ width: 100%;  position:absolute; padding: 1rem; top:0; bottom:0; margin:auto; flex-grow:1;}
+
+.overlay{ background-color: transparent; width: 100%; height:100%; transition:0.7s;}
+
+.eventItem:hover .eventcaption{visibility:visible; opacity: 1;}
+.eventItem:hover .overlay{opacity: 0.3; background-color: #f5f5f5; width: 100%; height:100%;}
+.eventcaption{  
+  position: absolute;
+  top: 10%;
+  background: transparent;
+  color: black;
+  visibility: hidden;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  font-weight: bold;
+  width: 100%;
+
+}
+
+@media(min-width: 300px){
+	.eventItem{height: 400px;}
+	.eventImageContainer{ height: 325px; }
+}
+
+@media (min-width: 576px){
+	.eventItem{height: 250px;}
+	.eventImageContainer{height: 175px;}
+
+}
+
+@media (min-width: 768px){
+	.eventItem{height: 350px;}
+	.eventImageContainer{height: 275px;}
+
+}
+@media (min-width: 992px){
+	.eventItem{height: 300px;}
+	.eventImageContainer{height: 225px;}
+
+}
+@media (min-width: 1200px){
+	.eventItem{height: 350px;}
+	.eventImageContainer{height: 275px;}
+	
+}
+

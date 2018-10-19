@@ -1,0 +1,45 @@
+<div class="login">
+	<div class="bar">
+	</div>
+	<div class="login-banner">
+		<div class="login-box">
+			<img src ="assets/images/keyboard.jpg">
+
+			
+		</div>
+		
+	</div>
+	<div class="container login-form" id="login">
+		<div class="row">
+			<div class="col-lg-5 col-md-5 col-sm-7">
+				<p> Don't have an account? Register <span class="registerlink" (click)="goToRegister()">here</span> for free!</p>
+			
+			</div>
+
+
+			<div class="col-lg-5 col-md-5 col-sm-7">
+				<h4> Login Now! </h4>
+				<form>
+				    <div class="form-group">
+				      <label for="exampleInputEmail1" class="text-uppercase" >Username</label>
+				      <input type="text" name="username" class="form-control" placeholder="" [(ngModel)]="user.username">
+				    </div>
+				    <div class="form-group">
+				     <label for="exampleInputPassword1" class="text-uppercase" >Password</label>
+				     <input type="password" class="form-control" name="password"placeholder="" [(ngModel)]="user.password">
+				    </div>
+				     <div [hidden]="!error" class="alert alert-danger">{{message}}</div>
+
+				    <div class="form-group button-section">
+				    	<button type="submit" class="submit formButton" (click)="submitPress()"> Submit </button>
+				    </div>
+				</form>
+			</div>
+			
+
+			
+		
+
+		</div>
+	</div>
+</div>

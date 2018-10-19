@@ -1,0 +1,62 @@
+<div class="landing">
+	<div class="image-container">
+		<div class="image-box">
+			<img src ="assets/images/building.jpg">
+			<div class="title">
+				<h1> GeekSocialize</h1> 
+				<p> Just Geeks Meeting Geeks</p>
+				<div class="row justify-content-around">
+				<button class = "login-button" (click)="goToLogin()"> Login </button>
+				<button class = "login-button" [ngx-scroll-to]="'#register'" [ngx-scroll-to-offset]="-60"> Register <span class="sr-only">(current)</span> </button>
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+	<div class="bar">
+
+	</div>
+	<div class="container about">
+		<h4> Welcome </h4>
+		<p>
+			Are you shy, introverted, perhaps a little geeky, and looking for friends? Are you new to an area and looking to meet new people? Then look no further! GeekSocialize is the site for you. We take the pressure off! Instead, we here at GeekSocialize aim to set up friendly and casual meetups, at casual locations, such as bars or maybe even your local game store. In this kind of group environment, relationships are easier to form, and it is a great way to get to know people who have similar interests as you do! Sign up Today for Free!
+
+		</p>
+		<div class="login-register">
+		</div>
+		
+	</div>
+
+	<div class="carousel-box container">
+	<div class="carousel-container" id="carousel">
+	  <ngb-carousel>  
+	   <ng-template ngbSlide>
+	    <div>
+	      <img [src]="images[0].source" alt="rest1">
+	    </div>
+	    <div class="carousel-caption">
+	    </div>
+	  </ng-template>
+	  <ng-template ngbSlide>
+	    <div>
+	      <img [src]="images[1].source" alt="rest2">
+	    </div>
+	    <div class="carousel-caption">
+
+	    </div>
+	  </ng-template>
+	  <ng-template ngbSlide>
+	    <div>
+	      <img [src]="images[2].source" alt="geeks">
+	    </div>
+	    <div class="carousel-caption">
+
+	    </div>
+	  </ng-template>
+	</ngb-carousel> 
+	</div>
+	</div> 
+
+	<app-register id="register"></app-register>
+</div>

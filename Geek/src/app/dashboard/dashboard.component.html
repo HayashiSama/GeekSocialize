@@ -1,0 +1,39 @@
+<div class="container dashboard">
+	<ngx-spinner
+		bdColor = "rgba(51, 51, 51, 0.8)"
+		size = "medium"
+		color = "#fff"
+		type = "pacman"
+	></ngx-spinner>
+
+	<div *ngIf="admin" class="form-group button-section">
+		<button type="submit" class="submit formButton" (click)="createNew()"> Create New Event </button>
+	</div>
+
+	<div class="options">
+		<div class="dropdown">
+		  <button class="formButton">Filter: </button>
+		  <div class="dropdown-content">
+		    <div class="dropdown-item"(click)="showAttending()">Attending </div>
+		    <div class="dropdown-item"(click)="showUpcoming()">Upcoming </div>
+		    <div class="dropdown-item"(click)="showAll()">All</div>
+		 </div>
+		</div>
+	</div>
+
+	<div class="eventDiv row">
+		<div ngsReveal *ngFor="let event of displayedevents"  class="eventItem col-sm-5 col-md-5 col-lg-3" (click)="goToEvent(event)">
+			<div class="overlay">
+				<div class="eventImageContainer">
+					<img class="eventImage" [src]="'data:image/png;base64,'+event.image | safeHtml">
+
+				</div>
+				
+				<h5> {{event.name}} </h5>
+			</div>
+			<div class="eventcaption"> <div class="captiondescription">{{event.description}} <p>{{event.parseddate}}</p></div></div>
+				
+		</div>	
+	</div>
+	
+</div>

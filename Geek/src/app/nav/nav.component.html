@@ -1,0 +1,39 @@
+<header>
+<nav class="navbar navbar-light navbar-expand-lg">
+	<div class="container navcontainer">
+    <a class="navbar-brand" (click)="goHome()"><h2>GeekSocialize</h2></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" (click)="isCollapsed = !isCollapsed">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="!isCollapsed">
+        <ul class="navbar-nav ml-auto">
+            <li *ngIf="loggedIn" class="nav-item">
+                <a class="nav-link" (click)="goHome()"> HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li *ngIf="!loggedIn" class="nav-item">
+                <a class="nav-link" (click)="goToLogin()"> LOGIN </a>
+            </li>
+            <li *ngIf="loggedIn" class="nav-item">
+                <a class="nav-link" (click)="goToLogout()"> LOGOUT </a>
+            </li>
+            <li *ngIf="!loggedIn" class="nav-item">
+                <a class="nav-link" (click)="goToRegister()"> REGISTER </a>
+            </li>
+            <li *ngIf="loggedIn" class="nav-item">
+                <a class="nav-link" (click)="goToProfile()"> PROFILE </a>
+            </li>
+        
+		    <li class="nav-item row">
+		    	<a class="nav-link icon"><fa name="facebook"></fa></a>
+		    	<a class="nav-link icon"><fa name="twitter"></fa></a>
+		    	<a class="nav-link icon"><fa name="instagram"></fa></a>
+		    </li>
+        </ul>
+    </div>
+
+
+</div>
+</nav>
+</header>

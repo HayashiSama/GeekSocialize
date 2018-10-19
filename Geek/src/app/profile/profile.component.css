@@ -1,0 +1,48 @@
+.profilebox { margin:10px;}
+.profileImage{ height: 100%; width: 100%; border-radius: 5px}
+.imageContainer:after{ width: 80%; height: 1px; background: #c8000a; content:' '; display: block; margin-left:auto;margin-right:auto; margin-top: 15px; margin-bottom: 15px;}
+.pictureChange { margin-top: 32px; }
+.username {margin-left:auto; margin-right:auto; text-align: center}
+.interestsList{ overflow-x:scroll; height: 150px; margin-bottom: 5px;}
+.interestButton{margin-top: 5px;}
+.imageContainer{height: 200px; width: 200px;text-align: center; padding: 0px;}
+.innerButton{padding-left: 10px; padding-right: 10px; width: 60px;}
+.aboutMe{margin-left: 20px}
+.interestElement{
+	margin:3px;
+}
+
+/* IF you hover anything except the X button it remains black*/
+.interestElement:hover{
+	color: #c8000a;
+}
+.interestElement .interestLabel:hover{
+	color: black;
+}
+.submitButton {text-align: center}
+.submitButton:before{ width: 80%; height: 1px; background: #c8000a; content:' '; display: block; margin-left:auto;margin-right:auto; margin-top: 15px; margin-bottom: 15px;}
+
+@media(min-width: 300px){
+
+	.imageContainer{ height: 200px; width: 200px;}
+}
+
+@media (min-width: 576px){
+
+	.imageContainer{height: 200px; width: 200px;}
+
+}
+
+@media (min-width: 768px){
+	.right{padding-top: 25px}
+	.imageContainer{height: 250px; width: 250px;}
+
+}
+@media (min-width: 992px){
+	.imageContainer{height: 250px; width: 250px;}
+
+}
+@media (min-width: 1200px){
+	.imageContainer{height: 314px;}
+	
+}

@@ -1,0 +1,46 @@
+<div class="row container newevent">
+	<div class="col-lg-5 col-md-5 col-sm-7">
+				<h5> New Event </h5>
+				<form>
+					<div class="form-group">
+				      <label for="name" class="text-uppercase" >Name</label>
+				      <input type="text" class="form-control" name="name" placeholder="" [(ngModel)]="event.name">
+				    </div>
+				    <div *ngIf="name" class="alert alert-danger">{{nameMessage}}</div>
+
+				    <div class="form-group">
+				      <label for="location" class="text-uppercase" >Location</label>
+				      <input type="text" class="form-control" name="location" placeholder="" [(ngModel)]="event.location">
+				    </div>
+
+				    <div class="form-group">
+				     <label for="eventdate" class="text-uppercase" >Date / Time</label>
+				     <input type="datetime-local" class="form-control" name="eventdate" placeholder="" [(ngModel)]="event.date">
+				    </div>
+
+
+				    <div class="form-group">
+				     <label for="capacity" class="text-uppercase" >Capacity</label>
+				     <input type="number" class="form-control" name="capacity" placeholder="" [(ngModel)]="event.capacity">
+				    </div>
+
+				    <div class="form-group">
+				    	<label for="file" class="text-uppercase" >Cover Picture</label>
+				    	<input type="file" (change)="onFileSelected($event)">
+				    </div>
+
+
+				    <div class="form-group">
+				    	<label for="description" class="text-uppercase" >Description</label>
+				    	<textarea  class="form-control" name="desciption" placeholder="" [(ngModel)]="event.description"></textarea>
+				    </div>
+				    <p *ngIf="error">{{message}}</p>
+
+				    <div class="form-group button-section">
+				    	<button type="submit" class="submit" (click)="submitPress()"> Submit </button>
+				    </div>
+
+
+				</form>
+	</div>
+</div>

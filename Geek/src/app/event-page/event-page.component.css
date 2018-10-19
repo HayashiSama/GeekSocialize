@@ -1,0 +1,9 @@
+.eventContainer{}
+.imageContainer{text-align: center}
+.imageContainer .eventImage {margin-left: auto; margin-right: auto; max-width: 100%}
+.eventDescription p{margin-left: 2rem;}
+.map{ margin: 5px; }
+.attendingList { height: 100px; overflow-x: scroll; border: 1px solid #dadde8; margin-bottom: 5px; padding-top: 5px;}
+.attendingElement{ margin-left: 25px; margin-right: 25px; }
+agm-map { height: 300px; }
+
