@@ -5,30 +5,33 @@
 	
 
 	<h4> {{event.name}} </h4>
-
-	<div class="eventDescription">
-		<h6>Location:</h6>
-			<p>{{event.location}}</p>
-		<h6>Total Capacity:</h6>
-			<p>{{event.capacity}}</p>
-		<h6> Date & Time </h6>
-			<p> {{parsedDate}}</p>
-		<h6>Description:</h6>
-			<p>{{event.description}}</p>
-		<h6> Attending: </h6>
-			<div class="attendingList container">
-					
-				<div *ngFor="let attendant of event.attending; let i = index" class="row attendingElement"> 
-					<div class="hoverRed" (click)="viewProfile(attendant.id)"> {{attendant.username}} </div>
-							
-				</div> 
-					
+	<div class="row">
+		<div class="eventDescription col-lg-6">
+			<h6>Location:</h6>
+				<p>{{event.location}}</p>
+			<h6>Total Capacity:</h6>
+				<p>{{event.capacity}}</p>
+			<h6> Date & Time </h6>
+				<p> {{parsedDate}}</p>
+			<h6>Description:</h6>
+				<p>{{event.description}}</p>
+			<h6> Attending: </h6>
+				<div class="attendingList container">
+						
+					<div *ngFor="let attendant of event.attending; let i = index" class="row attendingElement"> 
+						<div class="hoverRed" (click)="viewProfile(attendant.id)"> {{attendant.username}} </div>
+								
+					</div> 
+						
+				</div>
+		</div>
+		<div class="col-lg-6">
+			<div class="map container">
+				<agm-map [latitude]="lat" [longitude]="lng">
+				  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+				</agm-map>
 			</div>
-	</div>
-	<div class="map container">
-		<agm-map [latitude]="lat" [longitude]="lng">
-		  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-		</agm-map>
+		</div>
 	</div>
 
 	<p *ngIf="isMember"> You are currently attending this event. We hope to see you there! If you have changed your mind, please press the "Leave" button below.</p>

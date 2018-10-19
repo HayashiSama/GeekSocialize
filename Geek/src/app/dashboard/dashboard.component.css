@@ -38,7 +38,7 @@
   text-align: center;
   display:flex;
   flex-direction: column;
-  font-weight: bold;
+  font-weight: normal;
   width: 100%;
 
 }

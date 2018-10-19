@@ -17,49 +17,56 @@
 .row h4 {margin-left: 10px}
 .row h4:after{content:" "; min-width: 110px; max-width:110px; height:1px; background:#c8000a;; display:block; margin: 5px 0px 10px -10px; border-radius:3px; }
 
-.carousel { height: 30vh; width: 100%; margin:10px; }
-.carousel img {height: 30vh; width: 100%;}
+.carousel { height: 300px; width: 100%; margin:10px; }
+.carousel img {height: 300px; max-width: 100%;}
 .carousel-container{text-align: center; }
 .carousel-control-prev { width: 100px; display:none !important;}
 .carousel-control-next { display:none !important;}
 .carousel-indicators { display: none !important; }
 
-@media (min-width: 544px) {  
+@media (min-width: 544px) {
+  .carousel img{ height: 200px}   
   .title h1 {font-size:2rem;} /*1rem = 16px*/
   .title p{ font-size: 1rem; margin-top: -10px}
-  .carousel-container{text-align: center; padding-left: 25%; padding-right: 25%}
-  .image-box img { height: 40vh; }
+  .carousel-container{text-align: center; }
+  .image-box img { height: 200px; }
   .login-button {font-size: 0.5rem; border: 1px solid white;}
   .bar{height: 3rem;}  
 }
 
  
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
+@media (min-width: 768px) {
+  .carousel img{ height: 250px}  
+  .carousel { height: 250px;} 
   .title h1 {font-size:3rem;} /*1rem = 16px*/
   .title p{ font-size: 1.5rem; margin-top: -10px}
-  .image-box img { height: 60vh; }
+  .image-box img { height: 200px; }
   .login-button {font-size: 0.75rem; border: 2px solid white;}
   .bar{height: 4rem;}  
 }
  
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+  .carousel img{ height: 300px} 
+  .carousel { height: 300px;} 
   .title h1 {font-size:4rem;} /*1rem = 16px*/
   .title p{ font-size: 2rem; margin-top: -10px}
-  .image-box img { height: 80vh; }
+  .image-box img { height: 250px; }
   .login-button {font-size: 1rem; border: 2px solid white;}
   .bar{height: 5rem;}  
 }
  
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
+@media (min-width: 1200px) {
+  .carousel img{ height: 350px}
+  .carousel { height: 350px;}   
   .title h1 {font-size:5rem;} /*1rem = 16px*/
   .title p{ font-size: 2.5rem; margin-top: -15px}
-  .image-box img { height: 95vh; }
+  .image-box img { height: 300px; }
   .login-button {font-size: 1.25rem; border: 3px solid white;}
   .bar{height: 6rem;}    
 }
 
 
-.about{margin-top: 2%}
+.about{margin-top: 2%; font-weight: lighter;}
