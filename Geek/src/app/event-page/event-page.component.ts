@@ -121,13 +121,11 @@ export class EventPageComponent implements OnInit {
 
 
   modifyEvent(){
-  	console.log("Planned Feature")
   	this._router.navigate(['createEvent'])
 
   }
 
   joinEvent(){
-  	console.log("Joining Event")
   	let obs = this._httpService.joinEvent(this.event._id, this.user)
   	obs.subscribe(data =>{
   		if((data as any).message == "success"){

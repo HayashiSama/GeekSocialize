@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 .formButton{ border-radius: 5px }
-.formButton:hover{ color: #c8000a; border-color: #c8000a; font-weight: lighter;}
+.formButton:hover{ color: #c8000a; border-color: #c8000a; font-weight: lighter; outline: none !important}
 
 .hoverRed:hover{color: #c8000a}
 

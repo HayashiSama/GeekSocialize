@@ -84,7 +84,7 @@ export class CreateEventComponent implements OnInit {
   		this.error = true;
   		this.message = "Please submit a description"	
   	}
-  	else if(this.invalidFile){
+  	else if(this.invalidFile && !this.modifying){
   		this.error = true;
   		this.message = "Invalid File Type"
   	}

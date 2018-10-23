@@ -46,7 +46,7 @@ var UserSchema = new mongoose.Schema({
 })
 
 var EventSchema = new mongoose.Schema({
-	name: {type: String, required: true, unique: true},
+	name: {type: String, required: true},
 	location: {type: String, required: true},
 	lat: { type: Number, required: true},
 	long: { type: Number, required: true},
@@ -457,7 +457,7 @@ app.post('/create', upload.single('file'),  function(req,res){
 
 			request(url, function(error, response, body) {
 				if(error){
-					console.log(error)
+					res.json(error)
 				}
 				else{
 					var result = JSON.parse(body)

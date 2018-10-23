@@ -19,7 +19,7 @@
                 <a class="nav-link" (click)="goToLogout()"> LOGOUT </a>
             </li>
             <li *ngIf="!loggedIn" class="nav-item">
-                <a class="nav-link" (click)="goToRegister()"> REGISTER </a>
+                <a routerLink="/" [ngx-scroll-to]="'#register'" [ngx-scroll-to-offset]="-60" class="nav-link"> REGISTER </a>
             </li>
             <li *ngIf="loggedIn" class="nav-item">
                 <a class="nav-link" (click)="goToProfile()"> PROFILE </a>
