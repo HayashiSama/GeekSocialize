@@ -7,3 +7,5 @@
 .navbar .row {margin-right: 0.1rem}
 .navbar {box-shadow: 0 4px 2px -2px #aeaeae; padding-bottom: 0px; background-color: white}
 .navbar-brand{ font-family: 'Patrick Hand SC', cursive; }
+.navicon{display:inline-block; height:50px; vertical-align: top; margin-right: 5px;}
+.navbar h2{display:inline-block; margin-top: 6px;}
